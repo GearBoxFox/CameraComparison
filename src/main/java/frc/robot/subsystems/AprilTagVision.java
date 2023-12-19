@@ -17,11 +17,8 @@ import edu.wpi.first.math.geometry.Transform3d;
 import edu.wpi.first.math.geometry.Translation3d;
 import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.Timer;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
@@ -53,7 +50,7 @@ public class AprilTagVision extends SubsystemBase {
     private double lastDemoTagPoseTimestamp = 0.0;
 
     static {
-        cameraPoses = new Pose3d[] {};
+        cameraPoses = new Pose3d[] {new Pose3d()};
         xyStdDevCoefficient = 0.01;
         thetaStdDevCoefficient = 0.01;
     }
